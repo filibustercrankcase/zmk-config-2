@@ -24,7 +24,13 @@
 
   behaviors {
 
-&mt {    retro-tap;};
+lm: homerow_mods {       
+          compatible = "zmk,behavior-hold-tap";          
+            label = "HOMEROW_MODS";            #binding-cells = <2>;        
+    tapping-term-ms = <150>;  
+              quick_tap_ms = <0>;   
+                       flavor = "tap-preferred";      
+                             bindings = <&kp>, <&kp>;        };
 
  hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -43,7 +49,7 @@
     base_layer {
       bindings = <
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-             &hm LA(F4) Q   &hm ESC W   &hm LSHFT F    &hm SPACE P   &hm GRAVE B             &kp J        &kp L        &kp U         &kp Z       &mt LC(BSPC) BSPC
+             &hm LA(F4) Q   &hm ESC W   &hm LSHFT F    &hm SPACE P   &hm GRAVE B             &kp J        &kp L        &kp U         &kp Z       &lm LC(BSPC) BSPC
         // ├─────────────┼────────────s ─┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
              &hm LCTRL A    &hm LGUI R          &hm RET S    &hm LALT T   &hm MINUS G         &kp M   &hm LSHFT N    &hm LALT E   &hm LGUI I     &hm LCTRL O
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
