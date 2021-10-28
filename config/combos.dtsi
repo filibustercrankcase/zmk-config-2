@@ -1,0 +1,43 @@
+/*                KEY POSITIONS
+
+  ╭────────────────────╮ ╭────────────────────╮
+  │  0   1   2   3   4 │ │  5   6   7   8   9 │
+  │ 10  11  12  13  14 │ │ 15  16  17  18  19 │
+  │ 20  21  22  23  24 │ │ 25  26  27  28  29 │
+  ╰───────────╮ 30  31 │ │ 32  33 ╭───────────╯
+              ╰────────╯ ╰────────╯            */
+
+compatible = "zmk,combos";
+
+#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS, TIMEMS) \
+  combo_##NAME { \
+    bindings = <BINDINGS>; \
+    key-positions = <KEYPOS>; \
+    layers = <LAYERS>; \
+    timeout-ms=<TIMEMS>;\
+  };
+COMBO(baack, &kp BSPC, 10 13 31, BASE, 100)
+COMBO(winsqt, &kp LS(BACKSLASH), 17 18, BASE, 20)
+COMBO(winqt, &kp LS(N2), 17 18 19, BASE, 20)
+COMBO(vold, &kp C_VOL_DN, 2 12, BASE, 50)
+COMBO(volu, &kp C_VOL_UP, 3 13, BASE, 50)
+COMBO(semic, &kp LS(COMMA), 2 7, BASE, 50)
+COMBO(double, &kp LS(DOT), 1 8, BASE, 50)
+COMBO(ae, &kp SQT, 10 11, BASE, 26)
+COMBO(ue, &kp LBKT, 6 7, BASE, 26)
+COMBO(oe, &kp SEMI, 18 19, BASE, 26)
+
+
+COMBO(left, &kp LEFT, 11 12, BASE, 20)
+COMBO(right, &kp RIGHT, 12 13, BASE, 20)
+COMBO(down, &kp DOWN, 11 13, BASE, 20)
+COMBO(up, &kp UP, 11 12 13, BASE, 20)
+COMBO(bcsp, &kp BSPC, 1 2 3, BASE, 20)
+
+
+
+COMBO(browback, &kp C_AC_BACK, 1 2, BASE, 40)
+COMBO(browfor, &kp C_AC_FORWARD, 2 3, BASE, 40)
+COMBO(F11, &kp F11, 21 31, NUMPAD, 40)
+COMBO(F12, &kp F12, 21 22, NUMPAD, 40)
+//german
