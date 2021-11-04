@@ -36,7 +36,8 @@
             bindings = <&kp>, <&kp>;
         };
 
-         hf: homerow_mods {
+         hf: homerow_mods {//testing purpoes
+         
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
