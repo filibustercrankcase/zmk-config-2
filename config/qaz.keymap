@@ -35,6 +35,16 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+         hf: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <50>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
   };
 
   keymap {
@@ -45,7 +55,7 @@
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
              &hm LGUI Q   &hm ESC W   &hm LSHFT F    &hm SPACE P   &hm GRAVE B             &kp J        &kp L        &kp U         &kp Z       &hm LC(BSPC) BSPC
         // ├─────────────┼────────────s ─┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-             &hm LCTRL A    &hm LGUI R          &hm RET S    &hm LALT T   &hm MINUS G         &kp M   &hm LSHFT N    &hm LALT E   &hm LGUI I     &hm LCTRL O
+             &hm LCTRL A    &hm LGUI R          &hm RET S    &hm LALT T   &hm MINUS G         &kp M   &hm LSHFT N    &hm LALT E   &hm LGUI I     &hf LCTRL O
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
              &lt NUMPAD Y    &hm LALT X         &hm LGUI C       &hm LCTRL D     &hm LA(F4) V             &kp K         &hm RALT H        &kp COMMA     &kp DOT     &hm LS(N7) LS(MINUS)
         // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
